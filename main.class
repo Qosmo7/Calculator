@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main {
+    public Main() {
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int c;
+        do {
+            System.out.print("Введите х: ");
+            int x = in.nextInt();
+            System.out.print("Введите y: ");
+            int y = in.nextInt();
+            System.out.println("Выберите действие между х и у: (1 - сложение; 2 -вычитание; 3 - умножение; 4 - деление;)");
+            int a = in.nextInt();
+            int b;
+            switch(a) {
+            case 1:
+                b = x + y;
+                System.out.printf("Сумма %d + %d равна:", new Object[]{Integer.valueOf(x), Integer.valueOf(y)});
+                System.out.println(b);
+                break;
+            case 2:
+                b = x - y;
+                System.out.printf("Разность %d - %d равна:", new Object[]{Integer.valueOf(x), Integer.valueOf(y)});
+                System.out.println(b);
+                break;
+            case 3:
+                b = x * y;
+                System.out.printf("Произведение %d * %d равно:", new Object[]{Integer.valueOf(x), Integer.valueOf(y)});
+                System.out.println(b);
+                break;
+            case 4:
+                b = x / y;
+                System.out.printf("Деление %d * %d равно:", new Object[]{Integer.valueOf(x), Integer.valueOf(y)});
+                System.out.println(b);
+                break;
+            default:
+                System.out.println("Вы указали неправильное число.");
+            }
+
+            System.out.print("Начать сначала? (1 - да; 2 - нет;)");
+            c = in.nextInt();
+        } while(c == 1);
+
+    }
+}
